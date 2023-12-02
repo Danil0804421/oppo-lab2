@@ -16,7 +16,7 @@ vector<RealEstate> createObjectsFromFile(const string& filename) {
         sscanf_s(date.c_str(), "%d.%d.%d", &year, &month, &day);
 
         Data registrationDate;
-        registrationDate.setData(day, month, year); // Используем метод setData
+        registrationDate.setData(day, month, year); // РСЃРїРѕР»СЊР·СѓРµРј РјРµС‚РѕРґ setData
 
         properties.push_back({ owner, registrationDate, stoi(value) });
     }
@@ -25,9 +25,9 @@ vector<RealEstate> createObjectsFromFile(const string& filename) {
 
 void printrealestateinfo(const vector<RealEstate>& properties) {
     for (const auto& property : properties) {
-        cout << "Владелец: " << property.owner << endl;
-        cout << "Дата постановки на учет: " << property.registrationDate.formattedDate() << endl;
-        cout << "Ориентировочная стоимость: " << property.estimatedValue << endl;
+        cout << "Р’Р»Р°РґРµР»РµС†: " << property.owner << endl;
+        cout << "Р”Р°С‚Р° РїРѕСЃС‚Р°РЅРѕРІРєРё РЅР° СѓС‡РµС‚: " << property.registrationDate.formattedDate() << endl;
+        cout << "РћСЂРёРµРЅС‚РёСЂРѕРІРѕС‡РЅР°СЏ СЃС‚РѕРёРјРѕСЃС‚СЊ: " << property.estimatedValue << endl;
         cout << endl;
     }
 }
